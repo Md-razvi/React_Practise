@@ -2,6 +2,8 @@ import React from 'react'
 import Child from './Child'
 import ChildTwo from './ChildTwo'
 import ChildThree from './ChildThree'
+import Button from './Button'
+
 const Parent = () => {
   let obj={
     number1:1,
@@ -10,6 +12,9 @@ const Parent = () => {
       // console.log("This is a function")
        return 'This is a function'
     }
+  }
+  const as=function(){
+    console.log("Print Click me")
   }
   return (
     <div>
@@ -22,14 +27,18 @@ const Parent = () => {
         Question 2 prop with number string function
       </h4>
       <ChildTwo attr1={obj} />
-      <ChildThree message="This is a message"/>
+      {/* message is not define here so it takes from from  */}
       <ChildThree />
-
-      <h4>
-
-      </h4>
+      {/* message is edited in the given atribute */}
+      <ChildThree message="This message is edited"/>
+      {/* This is a Button Component */}
+      <Button name="Click" fun={as}/>
     </div>
   )
+}
+ChildThree.defaultProps={
+  //message attribute
+  message:'lorem epsdkjfalkdjfakda dfjlaj asdkfjal; asdefda alkjdke asdkjf;iowkn lowjnf oweijca lskdfjieklajdf'
 }
 
 export default Parent

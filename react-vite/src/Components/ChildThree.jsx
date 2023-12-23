@@ -3,7 +3,7 @@ import React from 'react'
 const ChildThree = (props) => {
   return (
     <div>
-      {props?.message}
+      {props.message}
     </div>
   )
 }
