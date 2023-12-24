@@ -1,0 +1,13 @@
+#buttons{
+    /* border:1px solid; */
+    /* width: 100%; */
+    /* padding: 10px ; */
+    margin: 22px 0 0 0;
+}
+button{
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+}
